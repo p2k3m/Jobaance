@@ -157,6 +157,39 @@ img {
   color: var(--accent);
 }
 
+.promo-banner {
+  background: var(--accent);
+  color: var(--light);
+  text-align: center;
+  padding: 1rem 0.5rem;
+  animation: bannerPulse 2s infinite;
+}
+
+.promo-banner .coming-soon {
+  font-weight: 700;
+}
+
+.countdown-wrapper {
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+#countdown {
+  font-weight: 700;
+}
+
+@keyframes bannerPulse {
+  0% {
+    background-color: var(--accent);
+  }
+  50% {
+    background-color: var(--accent2);
+  }
+  100% {
+    background-color: var(--accent);
+  }
+}
+
 .cta {
   background: linear-gradient(135deg, var(--accent), var(--accent2));
   color: var(--light);
