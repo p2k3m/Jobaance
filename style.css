@@ -233,12 +233,15 @@ img {
 }
 
 .faq-answer {
-  display: none;
-  padding: 0 1rem 1rem;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1rem;
+  transition: max-height 0.3s ease;
 }
 
 .faq-item.open .faq-answer {
-  display: block;
+  max-height: 200px;
+  padding: 0 1rem 1rem;
 }
 
 .faq-item.open .faq-question i {
