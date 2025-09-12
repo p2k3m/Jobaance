@@ -42,7 +42,19 @@ function initializeCountdown(daysFromNow) {
 initializeCountdown(7);
 
 document.querySelectorAll(".faq-question").forEach((btn) => {
+  btn.setAttribute("aria-expanded", "false");
   btn.addEventListener("click", () => {
-    btn.parentElement.classList.toggle("open");
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains("open");
+
+    document.querySelectorAll(".faq-item").forEach((other) => {
+      other.classList.remove("open");
+      other.querySelector(".faq-question").setAttribute("aria-expanded", "false");
+    });
+
+    if (!isOpen) {
+      item.classList.add("open");
+      btn.setAttribute("aria-expanded", "true");
+    }
   });
 });
