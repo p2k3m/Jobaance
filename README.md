@@ -2,46 +2,23 @@
 
 A colorful static landing page for **Jobaance** – a finance education and career training platform.
 
-## Deployment (S3 + Route 53)
 
-The repository includes a helper script to deploy the site directly to Amazon S3
-and create a Route 53 record.
+## Deployment
 
-### Prerequisites
-
-1. An AWS account with the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) configured.
-2. A registered domain in Route 53 (e.g., `example.com`).
-
-### Steps
-
-1. **Deploy infrastructure & upload files**
+1. Create an S3 bucket named after your domain (e.g., `example.com`).
+2. Enable static website hosting and apply a public-read bucket policy.
+3. Upload site files using the AWS console or:
 
    ```bash
-   ./deploy.sh example.com
+   aws s3 sync . s3://example.com
    ```
 
-   This command:
-   - Creates an S3 bucket (`example.com`) configured for static website hosting
-   - Applies a public-read bucket policy
-   - Creates a Route 53 alias record pointing to the bucket website endpoint
-   - Syncs local website files to S3
+4. In Route 53, create an alias `A` record pointing to the bucket website endpoint.
 
-2. **Browse** `http://example.com` to see the site.
+### Troubleshooting
 
-To update the site later, edit the files and rerun the `aws s3 sync` portion of
-`deploy.sh` or use the script again.
-
-### Manual Upload
-
-If you prefer a manual approach:
-
-```bash
-aws s3 cp index.html s3://example.com
-aws s3 cp style.css s3://example.com
-aws s3 cp script.js s3://example.com
-```
-
-Make sure the bucket policy allows public reads.
+- Clear browser caches if updates do not appear.
+- DNS changes may take time; verify propagation with tools like `dig` or `nslookup`.
 
 ## Project Structure
 
