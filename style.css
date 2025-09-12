@@ -1,10 +1,10 @@
 :root {
-  --primary: #4facfe;
-  --secondary: #00f2fe;
-  --dark: #0d0d0d;
+  --primary: #6a11cb;
+  --secondary: #2575fc;
+  --dark: #1e1e1e;
   --light: #ffffff;
-  --accent: #ff7e5f;
-  --accent2: #feb47b;
+  --accent: #ff512f;
+  --accent2: #dd2476;
 }
 
 * {
@@ -17,7 +17,7 @@ body {
   font-family: "Poppins", sans-serif;
   line-height: 1.6;
   color: var(--dark);
-  background: #f5f7fa;
+  background: linear-gradient(180deg, #f8f9fb 0%, #e8ecf1 100%);
 }
 
 img {
@@ -113,12 +113,13 @@ img {
 }
 
 .btn.primary {
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
   color: var(--light);
+  transition: background 0.3s ease;
 }
 
 .btn.primary:hover {
-  background: var(--accent2);
+  background: linear-gradient(135deg, var(--accent2), var(--accent));
 }
 
 .btn.secondary {
@@ -158,11 +159,12 @@ img {
 }
 
 .promo-banner {
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  background-size: 200% 200%;
   color: var(--light);
   text-align: center;
   padding: 1rem 0.5rem;
-  animation: bannerPulse 2s infinite;
+  animation: bannerPulse 3s ease infinite;
 }
 
 .promo-banner .coming-soon {
@@ -180,13 +182,10 @@ img {
 
 @keyframes bannerPulse {
   0% {
-    background-color: var(--accent);
-  }
-  50% {
-    background-color: var(--accent2);
+    background-position: 0% 50%;
   }
   100% {
-    background-color: var(--accent);
+    background-position: 100% 50%;
   }
 }
 
@@ -251,6 +250,27 @@ img {
   color: var(--light);
   text-align: center;
   padding: 1rem 0;
+}
+
+.icon-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.icon-group i {
+  font-size: 2rem;
+  color: var(--light);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
 @media (max-width: 768px) {
