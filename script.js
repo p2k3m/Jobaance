@@ -36,3 +36,29 @@ function initializeCountdown(daysFromNow) {
 }
 
 initializeCountdown(7);
+
+const navToggle = document.getElementById("nav-toggle");
+const mainNav = document.getElementById("main-nav");
+
+if (navToggle && mainNav) {
+  mainNav.addEventListener("show.bs.collapse", () => {
+    navToggle.setAttribute("aria-expanded", "true");
+  });
+
+  mainNav.addEventListener("hide.bs.collapse", () => {
+    navToggle.setAttribute("aria-expanded", "false");
+  });
+
+  const collapse = bootstrap.Collapse.getOrCreateInstance(mainNav, {
+    toggle: false,
+  });
+
+  const navLinks = mainNav.querySelectorAll(".nav-link");
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      collapse.hide();
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.focus();
+    });
+  });
+}
