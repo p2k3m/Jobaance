@@ -30,3 +30,9 @@ body {
     max-height: 300px;
   }
 }
+
+@media (max-width: 576px) {
+  .hero .image img {
+    max-height: 250px;
+  }
+}
