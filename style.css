@@ -36,3 +36,10 @@ body {
     max-height: 250px;
   }
 }
+
+.founder-img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
