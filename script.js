@@ -54,3 +54,25 @@ document.querySelectorAll(".faq-question").forEach((btn) => {
     }
   });
 });
+
+const navToggle = document.getElementById("nav-toggle");
+const mainNav = document.getElementById("main-nav");
+
+if (navToggle && mainNav) {
+  navToggle.addEventListener("click", () => {
+    const expanded = navToggle.getAttribute("aria-expanded") === "true";
+    navToggle.setAttribute("aria-expanded", String(!expanded));
+    mainNav.classList.toggle("show", !expanded);
+    if (expanded) {
+      navToggle.focus();
+    }
+  });
+
+  mainNav.querySelectorAll(".nav-link").forEach((link) => {
+    link.addEventListener("click", () => {
+      mainNav.classList.remove("show");
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.focus();
+    });
+  });
+}
