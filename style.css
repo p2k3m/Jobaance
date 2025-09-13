@@ -19,20 +19,20 @@ body {
   color: #fff;
 }
 
-.hero .image img {
+.hero img {
   max-width: 100%;
   max-height: 400px;
   object-fit: cover;
 }
 
 @media (max-width: 768px) {
-  .hero .image img {
+  .hero img {
     max-height: 300px;
   }
 }
 
 @media (max-width: 576px) {
-  .hero .image img {
+  .hero img {
     max-height: 250px;
   }
 }
@@ -41,5 +41,4 @@ body {
   max-width: 200px;
   width: 100%;
   height: auto;
-  border-radius: 50%;
 }
