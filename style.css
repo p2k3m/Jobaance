@@ -13,22 +13,12 @@ body {
   color: #fff;
 }
 
-.promo-banner {
-  background: linear-gradient(135deg, #ff512f, #dd2476);
-  background-size: 200% 200%;
-  color: #fff;
-  animation: bannerPulse 3s ease infinite;
-}
-
+.promo-banner,
 .cta {
   background: linear-gradient(135deg, #ff512f, #dd2476);
   color: #fff;
 }
 
-@keyframes bannerPulse {
-  0% {background-position:0% 50%;}
-  100% {background-position:100% 50%;}
-}
 .hero .image img {
   max-width: 100%;
   max-height: 400px;
