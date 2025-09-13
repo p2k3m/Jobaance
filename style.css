@@ -3,7 +3,6 @@ body {
 }
 
 .section-title {
-  text-align: center;
   background: linear-gradient(135deg, #6a11cb, #2575fc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -21,24 +20,12 @@ body {
   animation: bannerPulse 3s ease infinite;
 }
 
-.countdown-wrapper {
-  font-weight: 600;
-}
-
-.offer {
-  margin-top: 1rem;
-  font-weight: 700;
-  color: #ff512f;
-}
-
 .cta {
   background: linear-gradient(135deg, #ff512f, #dd2476);
   color: #fff;
 }
 
 .icon-group i {
-  font-size: 2rem;
-  color: #fff;
   animation: float 3s ease-in-out infinite;
 }
 
@@ -90,9 +77,4 @@ body {
 
 .faq-item.open .faq-question i {
   transform: rotate(180deg);
-}
-
-.footer {
-  background: #1e1e1e;
-  color: #fff;
 }
