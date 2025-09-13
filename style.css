@@ -31,6 +31,22 @@ body {
   .hero .image img {
     max-height: 250px;
   }
+
+  .promo-banner .promo-text {
+    font-size: 1.25rem;
+  }
+
+  .promo-banner .promo-subtext {
+    font-size: 1rem;
+  }
+
+  #faq .accordion-button {
+    font-size: 0.9rem;
+  }
+
+  footer p {
+    font-size: 0.875rem;
+  }
 }
 
 .founder-img {
