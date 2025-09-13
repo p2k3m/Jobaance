@@ -25,20 +25,10 @@ body {
   color: #fff;
 }
 
-.icon-group i {
-  animation: float 3s ease-in-out infinite;
-}
-
 @keyframes bannerPulse {
   0% {background-position:0% 50%;}
   100% {background-position:100% 50%;}
 }
-
-@keyframes float {
-  0%,100% {transform: translateY(0);}
-  50% {transform: translateY(-5px);}
-}
-
 .hero .image img {
   max-width: 100%;
   max-height: 400px;
