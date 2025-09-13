@@ -32,56 +32,72 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.0/dist/lux/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="navbar">
-      <div class="container nav-content">
-        <h1 class="logo">Jobaance</h1>
-        <nav id="main-nav" class="nav-links">
-          <a href="#about">About</a>
-          <a href="#courses">Courses</a>
-          <a href="#resources">Resources</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <button id="nav-toggle" aria-label="Toggle navigation">
-          <i class="fas fa-bars" aria-hidden="true"></i>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">Jobaance</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#main-nav"
+          aria-controls="main-nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
-      </div>
-    </header>
-
-    <section id="hero" class="hero section">
-      <div class="container hero-content" data-aos="fade-up">
-        <div class="text">
-          <h2>Learn Finance. Gain Skills. Get Job-Ready.</h2>
-          <p class="sub-heading">
-            Practical training in Investment Banking Operations, Fund
-            Accounting, and Capital Markets, Data analytics designed to make you
-            industry ready.
-          </p>
-          <a href="#cta" class="btn primary">Kickstart Your Career</a>
-          <div class="icon-group">
-            <i class="fas fa-chart-line fa-bounce" aria-hidden="true"></i>
-            <i class="fas fa-book-open fa-bounce" aria-hidden="true"></i>
-            <i class="fas fa-briefcase fa-bounce" aria-hidden="true"></i>
-          </div>
+        <div class="collapse navbar-collapse" id="main-nav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+            <li class="nav-item"><a class="nav-link" href="#resources">Resources</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
         </div>
-        <div class="image">
-          <picture>
-            <source
-              srcset="https://images.unsplash.com/photo-1556155092-8707de31f9c4?auto=format&fit=crop&w=1980&q=80"
-              media="(min-width: 768px)"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1556155092-8707de31f9c4?auto=format&fit=crop&w=987&q=80"
-              alt="Finance training"
-            />
-          </picture>
+      </div>
+    </nav>
+
+    <section id="hero" class="hero py-5">
+      <div class="container">
+        <div class="row align-items-center" data-aos="fade-up">
+          <div class="col-md-6">
+            <h2>Learn Finance. Gain Skills. Get Job-Ready.</h2>
+            <p class="lead">
+              Practical training in Investment Banking Operations, Fund
+              Accounting, and Capital Markets, Data analytics designed to make
+              you industry ready.
+            </p>
+            <a href="#cta" class="btn btn-primary">Kickstart Your Career</a>
+            <div class="icon-group d-flex gap-3 mt-3">
+              <i class="fas fa-chart-line fa-bounce" aria-hidden="true"></i>
+              <i class="fas fa-book-open fa-bounce" aria-hidden="true"></i>
+              <i class="fas fa-briefcase fa-bounce" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <picture>
+              <source
+                srcset="https://images.unsplash.com/photo-1556155092-8707de31f9c4?auto=format&fit=crop&w=1980&q=80"
+                media="(min-width: 768px)"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1556155092-8707de31f9c4?auto=format&fit=crop&w=987&q=80"
+                alt="Finance training"
+              />
+            </picture>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="promo-banner">
+    <section class="promo-banner text-center">
       <div class="container">
         <p class="promo-text">Coming Soon – Few Seats Left</p>
         <p class="promo-subtext">Secure your spot before it's gone!</p>
@@ -91,9 +107,9 @@
       </div>
     </section>
 
-    <section id="about" class="section about" data-aos="fade-up">
+    <section id="about" class="py-5" data-aos="fade-up">
       <div class="container">
-        <h2 class="section-title">Who We Are</h2>
+        <h2 class="section-title text-center">Who We Are</h2>
         <p>
           Jobaance is a finance education and career training platform dedicated
           to preparing graduates and professionals for Investment Banking
@@ -108,20 +124,20 @@
       </div>
     </section>
 
-    <section id="courses" class="section courses" data-aos="fade-up">
+    <section id="courses" class="py-5" data-aos="fade-up">
       <div class="container">
-        <h2 class="section-title">Flagship Program</h2>
+        <h2 class="section-title text-center">Flagship Program</h2>
         <h3>
           Investment Banking Operations/ Fund Accounting / Asset Servicing
           Training
         </h3>
-        <ul class="highlights">
-          <li>Trade Life Cycle</li>
-          <li>Settlements & Reconciliation</li>
-          <li>Fund Accounting & NAV</li>
-          <li>Asset Servicing & Middle Office</li>
-          <li>Tools: Excel, SQL, Power BI, Bloomberg Basics</li>
-          <li>Resume Building & Interview Prep</li>
+        <ul class="row row-cols-1 row-cols-md-2 g-2 list-unstyled">
+          <li class="col">Trade Life Cycle</li>
+          <li class="col">Settlements & Reconciliation</li>
+          <li class="col">Fund Accounting & NAV</li>
+          <li class="col">Asset Servicing & Middle Office</li>
+          <li class="col">Tools: Excel, SQL, Power BI, Bloomberg Basics</li>
+          <li class="col">Resume Building & Interview Prep</li>
         </ul>
         <div class="offer">
           <p>👉 First Class at Just ₹49</p>
@@ -130,43 +146,43 @@
       </div>
     </section>
 
-    <section id="who" class="section who" data-aos="fade-up">
+    <section id="who" class="py-5" data-aos="fade-up">
       <div class="container">
-        <h2 class="section-title">Who Can Join</h2>
-        <ul class="columns">
-          <li>MBA, BBA, B.Com, M.Com, Economics graduates</li>
-          <li>Freshers with basic finance knowledge</li>
-          <li>Professionals switching to finance roles</li>
-          <li>
+        <h2 class="section-title text-center">Who Can Join</h2>
+        <ul class="row row-cols-1 row-cols-md-2 g-2 list-unstyled">
+          <li class="col">MBA, BBA, B.Com, M.Com, Economics graduates</li>
+          <li class="col">Freshers with basic finance knowledge</li>
+          <li class="col">Professionals switching to finance roles</li>
+          <li class="col">
             Job seekers targeting IB Operations, Middle Office, Fund Accounting
           </li>
-          <li>Anyone looking for job-ready finance skills</li>
+          <li class="col">Anyone looking for job-ready finance skills</li>
         </ul>
       </div>
     </section>
 
-    <section id="resources" class="section resources" data-aos="fade-up">
+    <section id="resources" class="py-5" data-aos="fade-up">
       <div class="container">
-        <h2 class="section-title">Resources</h2>
-        <ul class="columns icons">
-          <li>
+        <h2 class="section-title text-center">Resources</h2>
+        <ul class="row row-cols-1 row-cols-md-2 g-3 list-unstyled">
+          <li class="col">
             <i class="fas fa-chalkboard-teacher" aria-hidden="true"></i> Expert
             trainers from top banks
           </li>
-          <li>
+          <li class="col">
             <i class="fas fa-book-open" aria-hidden="true"></i> Study notes &
             case-based examples
           </li>
-          <li><i class="fas fa-video" aria-hidden="true"></i> Recorded sessions for revision</li>
-          <li>
+          <li class="col"><i class="fas fa-video" aria-hidden="true"></i> Recorded sessions for revision</li>
+          <li class="col">
             <i class="fas fa-tasks" aria-hidden="true"></i> Real-world
             assignments & projects
           </li>
-          <li>
+          <li class="col">
             <i class="fas fa-file-alt" aria-hidden="true"></i> Resume &
             interview prep material
           </li>
-          <li>
+          <li class="col">
             <i class="fas fa-users" aria-hidden="true"></i> Networking groups
             on WhatsApp & Telegram
           </li>
@@ -174,45 +190,45 @@
       </div>
     </section>
 
-    <section id="milestones" class="section milestones" data-aos="fade-up">
+    <section id="milestones" class="py-5" data-aos="fade-up">
       <div class="container">
-        <h2 class="section-title">Milestones & Story</h2>
+        <h2 class="section-title text-center">Milestones & Story</h2>
         <p>Jobaance has just started its journey — but with a strong vision:</p>
-        <ul class="columns">
-          <li>Train 1,00+ graduates in the next 12 months</li>
-          <li>Build placement tie-ups with leading firms</li>
-          <li>Create India’s top platform for finance job readiness</li>
+        <ul class="row row-cols-1 row-cols-md-2 g-2 list-unstyled">
+          <li class="col">Train 1,00+ graduates in the next 12 months</li>
+          <li class="col">Build placement tie-ups with leading firms</li>
+          <li class="col">Create India’s top platform for finance job readiness</li>
         </ul>
       </div>
     </section>
 
-    <section id="testimonials" class="section testimonials" data-aos="fade-up">
-      <div class="container">
+    <section id="testimonials" class="py-5" data-aos="fade-up">
+      <div class="container text-center">
         <h2 class="section-title">Testimonials</h2>
         <p>💡 Coming Soon – Stories from our students</p>
       </div>
     </section>
 
-    <section id="cta" class="section cta" data-aos="fade-up">
+    <section id="cta" class="cta py-5 text-center" data-aos="fade-up">
       <div class="container">
         <h2>Kickstart Your Career in Finance – Join Now</h2>
-        <div class="cta-buttons">
-          <a href="https://wa.me/911234567890" class="btn secondary"
+        <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
+          <a href="https://wa.me/911234567890" class="btn btn-light"
             ><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a
           >
-          <a href="https://t.me/jobaance" class="btn secondary"
+          <a href="https://t.me/jobaance" class="btn btn-light"
             ><i class="fab fa-telegram" aria-hidden="true"></i> Telegram</a
           >
-          <a href="mailto:info@jobaance.com" class="btn secondary"
+          <a href="mailto:info@jobaance.com" class="btn btn-light"
             ><i class="fas fa-envelope" aria-hidden="true"></i> Contact</a
           >
         </div>
       </div>
     </section>
 
-    <section id="founders" class="section founders" data-aos="fade-up">
+    <section id="founders" class="py-5" data-aos="fade-up">
       <div class="container">
-        <h2 class="section-title">Founders’ Message</h2>
+        <h2 class="section-title text-center">Founders’ Message</h2>
         <h3>Prashant Kumar – Co-Founder & Lead Trainer</h3>
         <p>
           Over the past 8+ years, I’ve worked with some of the world’s largest
@@ -246,9 +262,9 @@
       </div>
     </section>
 
-    <section id="vision" class="section vision" data-aos="fade-up">
+    <section id="vision" class="py-5" data-aos="fade-up">
       <div class="container">
-        <h2 class="section-title">Our Vision</h2>
+        <h2 class="section-title text-center">Our Vision</h2>
         <p>
           Together, we built Jobaance with one goal: to create a
           career-launchpad for graduates and professionals where finance
@@ -259,9 +275,9 @@
       </div>
     </section>
 
-    <section id="faq" class="section faq" data-aos="fade-up">
+    <section id="faq" class="py-5" data-aos="fade-up">
       <div class="container">
-        <h2 class="section-title">FAQ</h2>
+        <h2 class="section-title text-center">FAQ</h2>
         <div class="faq-list">
           <div class="faq-item">
             <button class="faq-question">
@@ -336,12 +352,13 @@
       </div>
     </section>
 
-    <footer id="contact" class="footer">
-      <div class="container">
+    <footer id="contact" class="footer py-4">
+      <div class="container text-center">
         <p>&copy; <span id="year"></span> Jobaance. All rights reserved.</p>
       </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="script.js"></script>
   </body>
