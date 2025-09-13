@@ -25,12 +25,6 @@ body {
   object-fit: cover;
 }
 
-@media (max-width: 768px) {
-  .hero .image img {
-    max-height: 300px;
-  }
-}
-
 @media (max-width: 576px) {
   .hero .image img {
     max-height: 250px;
