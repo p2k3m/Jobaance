@@ -37,3 +37,16 @@ body {
   width: 100%;
   height: auto;
 }
+
+/* Instagram icon link styling */
+.instagram-link {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.instagram-link:hover,
+.instagram-link:focus {
+  color: #ffd700;
+  outline: 2px solid #ffd700;
+  outline-offset: 2px;
+}
