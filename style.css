@@ -84,6 +84,18 @@ body {
   color: #fff;
 }
 
+#program ul li {
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+#program ul li::before {
+  content: "•";
+  color: #2575fc;
+  position: absolute;
+  left: 0;
+}
+
 #who p.lead {
   font-weight: 400;
   margin-bottom: 1.5rem;
