@@ -83,3 +83,19 @@ body {
   background-color: #d62976;
   color: #fff;
 }
+
+#who p.lead {
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+#who ul li {
+  position: relative;
+  padding-left: 1.25rem;
+}
+#who ul li::before {
+  content: "•";
+  color: #2575fc;
+  position: absolute;
+  left: 0;
+}
+
